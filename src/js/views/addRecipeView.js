@@ -34,7 +34,7 @@ class addRecipeView extends View{
         })
     }
     _generateMarkup(){
-
+        return ``
     }
 
 }
