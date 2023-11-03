@@ -10,10 +10,22 @@ class searchView{
         this._parentEl.querySelector('.search__field').value = ''
     }
     addHandlerSearch(handler){
+        let keyPressed = false;
         this._parentEl.addEventListener('submit', function(e){
+
             e.preventDefault();
+            console.log('submit')
             handler();
 
+        })
+        this._parentEl.addEventListener('keypress',function(e){
+            keyPressed = true;
+            // if(e.key === 'Enter') return
+            console.log('keypress')
+            setTimeout( ()=>{
+                keyPressed && handler()   
+                keyPressed = false;
+            },2000)
         })
     }
 
