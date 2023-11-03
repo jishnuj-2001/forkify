@@ -32,7 +32,7 @@ class recipeView extends View{
     }
     
     _generateMarkup(){
-        console.log('rendering recipe')
+        // console.log('rendering recipe')
         return `
                 <figure class="recipe__fig">
                 <img src="${this._data.image}" alt="${this._data.title}" class="recipe__img" />
